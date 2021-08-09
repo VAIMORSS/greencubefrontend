@@ -8,14 +8,11 @@ import { connect } from 'react-redux'
 import { GET_DASHBOARD_INTEREST_COUNT } from '../store/dashboard/actions'
 
 
-
-
 function Dashboard(props) {
     React.useEffect(() => {
         props.dispatch({ type: GET_DASHBOARD_INTEREST_COUNT })
     }, [])
 
-    props.dashboardInfo && console.log(Object.keys(props.dashboardInfo).length);
 
     return (
         <MainWrapper>
